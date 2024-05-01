@@ -1,13 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Alert } from 'react-bootstrap';
-import { AuthContext } from '../../context/AuthContext';
-import { useFirestore } from '../../hooks/useFirestore';
-import { AddAuction } from './AddAuction';
-import { AuctionCard } from './AuctionCard';
-import { ProgressBar } from './ProgressBar';
+import { AuthContext } from '../../context/AuthContext.jsx';
+import { useFirestore } from '../../hooks/useFirestore.jsx';
+import  AddAuction  from './AddAuction.jsx';
+import  AuctionCard  from './AuctionCard.jsx';
 
-
-export const AuctionBody = () => {
+export const ProgressBar = () => {
   const [auction, setAuction] = useState(null);
   const { currentUser, globalMsg } = useContext(AuthContext);
   const { docs } = useFirestore('auctions');
@@ -33,4 +31,4 @@ export const AuctionBody = () => {
   );
 };
 
-export default  AuctionBody;
+export default ProgressBar;
