@@ -71,7 +71,7 @@ const AddAuction = ({ setAuction }) => {
           <Button type="primary" onClick={openForm}>
             + Add Auction
           </Button>
-          <Modal centered title="Create Auction" visible={showForm} onCancel={closeForm} footer={null}>
+          <Modal centered title="Create Auction" open={showForm} onCancel={closeForm} footer={null}>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <Form form={form} onFinish={onFinish} layout="vertical">
               <Row gutter={16}>
